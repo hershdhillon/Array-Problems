@@ -46,4 +46,27 @@ public class SingleDimensionArray {
 		System.out.println("Invalid index to access array !");
 		}
 	}
+	
+	//Search for an element in the given array
+	public void searchInAnArray(int valueToSearch) {
+	    for (int i = 0; i < arr.length; i++){
+	        if(arr[i] == valueToSearch){
+	        System.out.println("Value found!");
+	        System.out.println("Index of " + valueToSearch + " is: "+ i);
+	        return;
+	        }
+	    }
+	    System.out.println(valueToSearch + " is not found!");
+	}
+	
+	public void deleteValueFromArray(int deleteValueFromThisCell){
+	    try{
+	        arr[deleteValueFromThisCell] = Integer.MIN_VALUE;
+	    } catch (ArrayIndexOutOfBoundsException e) {
+	        System.out.println();
+	        System.out.println("Can't delete the value as cell# provided is not in the range of array !");
+	        // e.printStackTrace();
+	        
+	    }
+	}
 }//End of Class
